@@ -4,6 +4,7 @@
 - [wp](#wp)
   - [Features](#features)
   - [Installation](#installation)
+  - [Usage](#usage)
 <!--toc:end-->
 
 Improved wifi-password script for **macOS**.
