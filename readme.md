@@ -45,7 +45,7 @@ OR
 Paste
 
 ``` sh
-curl -L https://raw.githubusercontent.com/matt-dong-123/wp/refs/headr/main/wp -o ~/bin/wp && chmod +x ~/bin/wp
+curl -L https://raw.githubusercontent.com/matt-dong-123/wp/refs/head/main/wp -o ~/bin/wp && chmod +x ~/bin/wp
 ```
 
 into the terminal.
