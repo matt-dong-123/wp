@@ -22,6 +22,14 @@ Use my [dotfiles](https://github.com/matt-dong-123/dotfiles)
 
 OR
 
+Install with [brew](https://brew.sh)
+
+```
+brew install matt-dong-123/tap/wp
+```
+
+OR
+
 Install with your favorite zsh plugin manager
 
 e.g. [zgenom](https://github.com/jandamm/zgenom):
