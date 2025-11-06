@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION="0.1.0"
+VERSION="1.2.0"
 COPY=false
 FZF=false
 
@@ -30,7 +30,7 @@ usage() {
 		-f | --fzf      Choose network with fzf (note: cannot pass networks)
 		-V | --version  Print version
 		-h | --help     Print this message
-		        -q | --quiet    Suppress output
+		-q | --quiet    Suppress output
 
 	EOF
 	exit 0
@@ -90,6 +90,8 @@ fi
 if $COPY; then
 	if ! security find-generic-password -wa "$NETWORK" 2>/dev/null | pbcopy; then
 		die "Failed to copy password for '$NETWORK'. It might not be in your keychain."
+	else
+		log "Copied!"
 	fi
 else
 	if ! security find-generic-password -wa "$NETWORK" 2>/dev/null; then
