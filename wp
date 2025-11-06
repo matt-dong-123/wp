@@ -4,6 +4,12 @@ VERSION="0.1.0"
 COPY=false
 FZF=false
 
+if [ -t 1 ]; then
+	VERBOSE=1
+else
+	VERBOSE=
+fi
+
 log() {
 	echo -e "$(tput setaf 2)✔︎ $*$(tput sgr0)"
 }
@@ -24,6 +30,7 @@ usage() {
 		-f | --fzf      Choose network with fzf (note: cannot pass networks)
 		-V | --version  Print version
 		-h | --help     Print this message
+		        -q | --quiet    Suppress output
 
 	EOF
 	exit 0
@@ -40,6 +47,9 @@ while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do
 	-V | --version)
 		echo "version $VERSION"
 		exit 0
+		;;
+	-q | --quiet)
+		VERBOSE=
 		;;
 	-h | --help)
 		usage
@@ -72,8 +82,10 @@ else
 	NETWORK=$*
 fi
 
-log "Using network $NETWORK"
-log "Keychain prompt incoming..."
+if [ $VERBOSE ]; then
+	log "Using network $NETWORK"
+	log "Keychain prompt incoming..."
+fi
 
 if $COPY; then
 	if ! security find-generic-password -wa "$NETWORK" 2>/dev/null | pbcopy; then
