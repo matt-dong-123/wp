@@ -4,6 +4,10 @@ VERSION="0.1.0"
 COPY=false
 FZF=false
 
+log() {
+	echo -e "$(tput setaf 2)✔︎ $*$(tput sgr0)"
+}
+
 die() {
 	echo -e "$(tput setaf 1)✘ $*$(tput sgr0)" >&2
 	exit 1
@@ -67,6 +71,9 @@ if [[ $# -eq 0 ]]; then
 else
 	NETWORK=$*
 fi
+
+log "Using network $NETWORK"
+log "Keychain prompt incoming..."
 
 if $COPY; then
 	if ! security find-generic-password -wa "$NETWORK" 2>/dev/null | pbcopy; then
