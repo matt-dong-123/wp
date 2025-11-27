@@ -1,11 +1,12 @@
 # wp
 
 <!--toc:start-->
+
 - [wp](#wp)
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
-<!--toc:end-->
+  <!--toc:end-->
 
 Improved wifi-password script for **macOS**.
 
@@ -44,7 +45,7 @@ OR
 
 Paste
 
-``` sh
+```sh
 curl -L https://raw.githubusercontent.com/matt-dong-123/wp/refs/head/main/wp -o ~/bin/wp && chmod +x ~/bin/wp
 ```
 
@@ -81,5 +82,5 @@ wp -f
 Copy that:
 
 ```
-wp -f -c
+wp -fc
 ```
