@@ -19,10 +19,6 @@ Inspired (and stole some code from) [the original](https://github.com/rauchg/wif
 
 ## Installation
 
-Use my [dotfiles](https://github.com/matt-dong-123/dotfiles)
-
-OR
-
 Install with [brew](https://brew.sh)
 
 ```
