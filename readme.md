@@ -8,7 +8,7 @@
   - [Usage](#usage)
   <!--toc:end-->
 
-Improved wifi-password script for **macOS**.
+Show your *w*ifi *p*assword quickly, for **macOS**.
 
 Inspired (and stole some code from) [the original](https://github.com/rauchg/wifi-password).
 
